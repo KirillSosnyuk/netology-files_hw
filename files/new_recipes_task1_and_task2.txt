@@ -3,12 +3,6 @@
 Запеченный картофель:[{'ingredient_name': 'Картофель', 'quantity': '1', 'measure': 'кг'}, {'ingredient_name': 'Чеснок', 'quantity': '3', 'measure': 'зубч'}, {'ingredient_name': 'Сыр гауда', 'quantity': '100', 'measure': 'г'}]
 Фахитос:[{'ingredient_name': 'Говядина', 'quantity': '500', 'measure': 'г'}, {'ingredient_name': 'Перец сладкий', 'quantity': '1', 'measure': 'шт'}, {'ingredient_name': 'Лаваш', 'quantity': '2', 'measure': 'шт'}, {'ingredient_name': 'Винный уксус', 'quantity': '1', 'measure': 'ст.л'}, {'ingredient_name': 'Помидор', 'quantity': '2', 'measure': 'шт'}]
 
-Утка:{'measure': 'шт', 'quantity': 3}
-Вода:{'measure': 'л', 'quantity': 6}
-Мед:{'measure': 'ст.л', 'quantity': 9}
-Соевый соус:{'measure': 'мл', 'quantity': 180}
-Говядина:{'measure': 'г', 'quantity': 1500}
-Перец сладкий:{'measure': 'шт', 'quantity': 3}
-Лаваш:{'measure': 'шт', 'quantity': 6}
-Винный уксус:{'measure': 'ст.л', 'quantity': 3}
-Помидор:{'measure': 'шт', 'quantity': 6}
+Яйцо:{'measure': 'шт', 'quantity': 2}
+Молоко:{'measure': 'мл', 'quantity': 100}
+Помидор:{'measure': 'шт', 'quantity': 2}

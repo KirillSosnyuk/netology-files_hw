@@ -1,5 +1,7 @@
 import os
-def file_load(filename: str, mode: str="w", coding: str="utf-8"): # На всякий случай добавил функцию сохранения результата работы в текстовый файл.
+
+
+def file_load(filename: str, mode: str="w", coding: str="utf-8"):
     with open(filename, mode, encoding=coding) as file:
         for dish in cook_book:
             file.write(str(dish) + ":" + str(cook_book[dish]) + "\n")
@@ -9,10 +11,10 @@ def file_load(filename: str, mode: str="w", coding: str="utf-8"): # На вся�
             
 def get_shop_list_by_dishes(dishes, person_count):
     ingredients = {}
-    for dish in dishes:
+    for dish in set(dishes): # Теперь цикл работает с множеством, чтобы избежать лишних итераций
         for components in cook_book[dish]:
-            ingredients[components[book_values[0]]] = {book_values[2] : components[book_values[2]], book_values[1] : int(components[book_values[1]]) * person_count}
-            
+            ingredients[components[book_values[0]]] = {book_values[2] : components[book_values[2]], book_values[1] : int(components[book_values[1]]) * person_count * dishes.count(dish)}
+            # Добавил умножение продуктов на количество блюд в списке dishes
     return ingredients
 
 def file_read(filename: str, mode: str="r", coding: str="utf-8"):
@@ -52,10 +54,13 @@ SAVE_FILE = 'new_recipes_task1_and_task2.txt'
 FULL_PATH_FOR_SAVE = os.path.join(FILE_PATH, DIR, SAVE_FILE)
 
 # Задача 1
-print(file_read(FULL_PATH_TASK_1)) # Тестуем для задачи № 1
+file_read(FULL_PATH_TASK_1) # Тестуем для задачи № 1
 
 #Задача 2
-ingredients_for_save = get_shop_list_by_dishes(['Утка по-пекински', 'Фахитос'], 3)
+ingredients_for_save = get_shop_list_by_dishes(['Омлет', 'Омлет', 'Омлет'], 1)
 print(ingredients_for_save) # Тестируем для задачи № 2
 
-file_load(FULL_PATH_FOR_SAVE)
+ingredients_for_save_1 = get_shop_list_by_dishes(['Омлет'], 3)
+print(ingredients_for_save_1)
+
+#file_load(FULL_PATH_FOR_SAVE)
